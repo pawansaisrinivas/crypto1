@@ -6,109 +6,117 @@
     <title>CRYPTO</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #11235A;
-    background-image: url(images/CRYPTO.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #11235A;
+            background-image: url(images/CRYPTO.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
 
-html, body {
-    height: 100%;
-}
+        html, body {
+            height: 100%;
+        }
 
-h1,h3{
-    text-align: center;
-}
-p{
-    text-align: center;
-}
+        h1, h3 {
+            text-align: center;
+        }
 
-h2 {
-    text-align: center;
-    color: black;
-    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f;
-    filter: drop-shadow(0 0 5px #00f);
-}
+        p {
+            text-align: center;
+        }
 
-nav {
-    text-align: center;
-    
-    padding: 10px;
-}
+        h2 {
+            text-align: center;
+            color: black;
+            text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f;
+            filter: drop-shadow(0 0 5px #00f);
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        nav {
+            text-align: center;
+            padding: 10px;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 15px;
-    max-height: fit-content;
-}
-p {
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    color: #f5f5f5;
-    background-color: rgba(1, 8, 26, 0.6);
-    border-radius: 10px;
-    padding: 50px;
-    max-width: 600px;
-    margin: 20px auto;
-    text-shadow: 0 0 5px rgb(1, 1, 19), 0 0 10px rgb(1, 1, 19), 0 0 15px rgb(0, 0, 4), 0 0 20px rgb(1, 1, 15);
-    filter: drop-shadow(0 0 5px rgb(1, 1, 103));
-}
-.card {
-            background-color: #fff;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            color: #fff;
+            font-size: 15px;
+            max-height: fit-content;
+        }
+
+        h3,p {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #161515;
+            background-color: rgb(255, 255, 255);
             border-radius: 10px;
+            padding: 0px;
+            max-width: 600px;
+            margin: 20px auto;
+            
+        }
+
+        .card-container {
+            display: flex;
+           
+            align-items: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: center;
-            padding: 5px;
-            margin: 50px;
+            padding: 0px;
+            margin: 30px;
         }
 
         .card img {
             width: 100%;
-            border-radius: 70%;
-            margin-bottom: 10px;
+            border-radius: 0% 0% 0 0; /* Added rounded corners to the top of the image */
+            height: 370px; /* Set a fixed height for the images */
+            object-fit: cover; /* Maintain aspect ratio while covering the space */
         }
 
         .card h3 {
             margin: 0;
-            color: #333;
+            color: #000000;
         }
 
     </style>
 </head>
-<body></body>
+<body>
     <h2>CRYPTO CLUB</h2>
     <nav>
         <ul>
@@ -116,16 +124,27 @@ p {
             <li><a href="about.html">About</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="team.html">Team</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
             <li><a href="contact.html">Contact Us</a></li>&nbsp;&nbsp;&nbsp;&nbsp;
-            </ul>
+        </ul>
     </nav>
+
+    <br><br>
+
     <div class="card-container">
         <div class="card">
-            <img src="images/InShot_20231215_204713537_11zon.jpg" alt="Team Member 1">
-            <h3>Pawan Sai Srinivas Panigrahi</h3>
-            <p>Student Relations Co-Ordinator</p>
+            <img src="images/WhatsApp Image 2024-01-01 at 01.23.16_01673a83.jpg" alt="Team Member 1">
+            <h3>Vidya Penumarthi</h3>
+            <p>2200031184</p>
+            <p><b>President</b></p>
         </div>
 
-        
+        <div class="card">
+            <img src="images/InShot_20231215_204713537_11zon.jpg" alt="Team Member 2">
+            <h3>Pawan Sai Srinivas Panigrahi</h3>
+            <p>2200030829</p>
+            <p><b>Student Relations Co-Ordinator</b></p>
+        </div>
+    </div>
+
     <br><br>
 
 </body>
