@@ -30,7 +30,7 @@
 
         h2 {
             text-align: center;
-            color: black;
+            color: rgb(255, 255, 255);
             text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f;
             filter: drop-shadow(0 0 5px #00f);
         }
@@ -72,7 +72,7 @@
             max-height: fit-content;
         }
 
-        h3,p {
+        h3, p {
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
             font-size: 18px;
@@ -82,40 +82,43 @@
             padding: 0px;
             max-width: 600px;
             margin: 20px auto;
-            
         }
 
         .card-container {
-    display: flex;
-    justify-content: space-around; /* Distribute cards evenly along the line */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-}
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-.card {
-    background-color: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    padding: 0px;
-    margin: 10px; /* Adjusted margin for spacing between cards */
-}
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 0;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+        }
 
         .card img {
             width: 100%;
-            border-radius: 0% 0% 0 0; /* Added rounded corners to the top of the image */
-            height: 370px; /* Set a fixed height for the images */
-            object-fit: cover; /* Maintain aspect ratio while covering the space */
-        }
-        .card:has(img:hover) img:not(:hover){
-            scale: 0.8;
-            opacity: 0.5;
+            border-radius: 0% 0% 0 0;
+            height: 370px;
+            object-fit: cover;
+            transition: transform 0.3s, opacity 0.3s;
         }
 
-        .card img :hover{
-            box-shadow: 0 0 5px black;
+        .card:hover img {
+            transform: scale(0.9);
+            opacity: 0.8;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             cursor: pointer;
         }
 
@@ -123,7 +126,6 @@
             margin: 0;
             color: #000000;
         }
-
     </style>
 </head>
 <body>
@@ -152,7 +154,7 @@
             <p>2200031168</p>
             <p><b>Vice-President</b></p>
         </div>
-<div class="card">
+        <div class="card">
             <img src="images/WhatsApp Image 2024-01-01 at 08.52.21_c834b6a9.jpg" alt="Team Member 1">
             <h3>Abhilash Bandaru</h3>
             <p>2200031282</p>
@@ -170,7 +172,12 @@
             <p>2200030767</p>
             <p><b>PR-Lead</b></p>
         </div>
-        
+        <div class="card">
+            <img src="images/WhatsApp Image 2024-01-01 at 18.27.34_f3a23980.jpg" alt="Team Member 2">
+            <h3>Ch Deepak</h3>
+            <p>2200090221</p>
+            <p><b>PR-Lead</b></p>
+        </div>
     </div>
 
     <br><br>
