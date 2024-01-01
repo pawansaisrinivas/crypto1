@@ -86,27 +86,37 @@
         }
 
         .card-container {
-            display: flex;
-           
-            align-items: center;
-        }
+    display: flex;
+    justify-content: space-around; /* Distribute cards evenly along the line */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
 
-        .card {
-            background-color: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-            padding: 0px;
-            margin: 30px;
-        }
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 0px;
+    margin: 10px; /* Adjusted margin for spacing between cards */
+}
+
 
         .card img {
             width: 100%;
             border-radius: 0% 0% 0 0; /* Added rounded corners to the top of the image */
             height: 370px; /* Set a fixed height for the images */
             object-fit: cover; /* Maintain aspect ratio while covering the space */
+        }
+        .card:has(img:hover) img:not(:hover){
+            scale: 0.8;
+            opacity: 0.5;
+        }
+
+        .card img :hover{
+            box-shadow: 0 0 5px black;
+            cursor: pointer;
         }
 
         .card h3 {
@@ -153,6 +163,12 @@
             <h3>Pawan Sai Srinivas Panigrahi</h3>
             <p>2200030829</p>
             <p><b>Student Relations Co-Ordinator</b></p>
+        </div>
+        <div class="card">
+            <img src="images/WhatsApp Image 2024-01-01 at 10.36.18_de93777d.jpg" alt="Team Member 2">
+            <h3>Nalla Harshavardhan</h3>
+            <p>2200030767</p>
+            <p><b>PR-Lead</b></p>
         </div>
         
     </div>
