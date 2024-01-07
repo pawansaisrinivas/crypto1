@@ -82,7 +82,7 @@
             behavior: scroll;
             direction: left;
             padding: 10px;
-            color: #ffffff; /* Set the text color to white */
+            color: #ffffff;
         }
 
         marquee.top-marquee span {
@@ -119,6 +119,50 @@
             margin: 20px auto;
             text-shadow: 0 0 5px rgb(1, 1, 19), 0 0 10px rgb(1, 1, 19), 0 0 15px rgb(0, 0, 4), 0 0 20px rgb(1, 1, 15);
             filter: drop-shadow(0 0 5px rgb(1, 1, 103));
+        }
+
+        /* Chatbot styles */
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 300px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #chatbot-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #chatbot-body {
+            padding: 10px;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #user-input {
+            width: calc(100% - 20px);
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        #send-button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -160,6 +204,54 @@
             cryptography and improve their mathematical skills in a fun and engaging way. We welcome students of all
             abilities to join us and become part of the exciting world of cryptography!</p>
     </div>
+
+    <!-- Chatbot container -->
+    <div id="chatbot-container">
+        <div id="chatbot-header" onclick="toggleChatbot()">Chat with Crypto Bot</div>
+        <div id="chatbot-body">
+            <p>Welcome to Crypto Club! How can I assist you today?</p>
+            <ul>
+                <li><strong>/about</strong> - Learn more about Crypto Club</li>
+                <li><strong>/events</strong> - Explore upcoming events</li>
+                <li><strong>/contact</strong> - Get in touch with us</li>
+                <li><strong>hi</strong> - Welcome message</li>
+            </ul>
+            <input type="text" id="user-input" placeholder="Type your command...">
+            <button id="send-button" onclick="sendCommand()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot script
+        function toggleChatbot() {
+            const chatbotBody = document.getElementById('chatbot-body');
+            chatbotBody.style.display = chatbotBody.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function sendCommand() {
+            const userInput = document.getElementById('user-input').value.toLowerCase();
+            const chatbotBody = document.getElementById('chatbot-body');
+
+            // Handle fixed commands
+            if (userInput === '/about') {
+                chatbotBody.innerHTML += "<p>We are the Crypto Club, exploring the world of cryptography!</p>";
+            } else if (userInput === '/events') {
+                chatbotBody.innerHTML += "<p>Check out our upcoming events on the Events page.</p>";
+            } else if (userInput === '/contact') {
+                chatbotBody.innerHTML += "<p>Contact us: cryptoclubklsac@gmail.com </br> Student Relations Coordinator: 7995481098</p>";
+            } else if (userInput === 'hi') {
+                chatbotBody.innerHTML += "<p>Welcome to our Supporting ChatBot.</p>";
+            } else {
+                chatbotBody.innerHTML += "<p>Sorry, I didn't understand that command. Try again!</p>";
+            }
+
+            // Clear user input
+            document.getElementById('user-input').value = '';
+
+            // Scroll to the bottom of the chat
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }
+    </script>
 </body>
 
 </html>
