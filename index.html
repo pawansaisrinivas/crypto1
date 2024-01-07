@@ -215,6 +215,9 @@
                 <li><strong>/events</strong> - Explore upcoming events</li>
                 <li><strong>/contact</strong> - Get in touch with us</li>
                 <li><strong>hi</strong> - Welcome message</li>
+                <li><strong>who are you</strong> - Reply message</li>
+                <li><strong>what is your name</strong> - Reply message</li>
+                <li><strong>what is your age</strong> - Reply message</li>
             </ul>
             <input type="text" id="user-input" placeholder="Type your command...">
             <button id="send-button" onclick="sendCommand()">Send</button>
@@ -241,6 +244,15 @@
                 chatbotBody.innerHTML += "<p>Contact us: cryptoclubklsac@gmail.com </br> Student Relations Coordinator: 7995481098</p>";
             } else if (userInput === 'hi') {
                 chatbotBody.innerHTML += "<p>Welcome to our Supporting ChatBot.</p>";
+            }
+            else if (userInput === 'who are you') {
+                chatbotBody.innerHTML += "<p>I am a Chatbot designed by the team of Crypto Club.</p>";
+            }
+            else if (userInput === 'what is your name') {
+                chatbotBody.innerHTML += "<p>I am named as Chinnu by the owner of this Chatbot.</p>";
+            }
+            else if (userInput === 'what is your age') {
+                chatbotBody.innerHTML += "<p>Since i am a Chatbot i doesn't get aged.</p>";
             } else {
                 chatbotBody.innerHTML += "<p>Sorry, I didn't understand that command. Try again!</p>";
             }
